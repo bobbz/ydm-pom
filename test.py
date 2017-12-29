@@ -1,13 +1,15 @@
 import unittest
 from selenium import webdriver
 import page
+from JsonDataManager import JsonData
 
 
 class FlashCatLogin(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
-        self.driver.get(r"url")
+        jsData = JsonData(r"D:\ydm-pom\values.json")
+        self.driver.get(jsData.get_value("url"))
 
     def test_login(self):
         login_page = page.LoginPage(self.driver)
