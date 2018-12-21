@@ -8,7 +8,7 @@ class FlashCatLogin(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
-        jsData = JsonData(r"D:\ydm-pom\values.json")
+        jsData = JsonData(r"********")
         self.driver.get(jsData.get_value("url"))
 
     def test_login(self):
